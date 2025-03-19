@@ -177,6 +177,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6635941195121006266}
+  - component: {fileID: -6817810782773805350}
   m_Layer: 0
   m_Name: Balanced Meal
   m_TagString: Untagged
@@ -202,6 +203,21 @@ Transform:
   - {fileID: 8546318070867030830}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-6817810782773805350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7521866522324731229}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c702b7447ce908646a2db7e04c2138b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  top: {fileID: 1564720806905418064}
+  mid: {fileID: 1033912179985239598}
+  bot: {fileID: 8546318070867030830}
 --- !u!1 &8992000188178793139
 GameObject:
   m_ObjectHideFlags: 0
