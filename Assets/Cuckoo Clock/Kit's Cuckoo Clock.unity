@@ -38,7 +38,6 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -223,6 +222,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef2fdd856a8c45e4e9e2128ad396f2f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hourHand: {fileID: 1638572468}
+  minutehand: {fileID: 239713389}
   timeAnHourTakes: 5
   t: 0
   hour: 0
@@ -232,7 +233,7 @@ MonoBehaviour:
       - m_Target: {fileID: 860762275}
         m_TargetAssemblyTypeName: KitChime, Assembly-CSharp
         m_MethodName: Chime
-        m_Mode: 1
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -400,7 +401,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 4fd926af1e936314c9de00ec09b1bb7e, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -498,6 +499,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23e9cd962dc5279409058d819f27f0c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Clock: {fileID: 23430217}
 --- !u!1 &1230641175
 GameObject:
   m_ObjectHideFlags: 0

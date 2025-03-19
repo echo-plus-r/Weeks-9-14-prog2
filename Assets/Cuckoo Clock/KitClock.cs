@@ -12,17 +12,16 @@ public class KitClock : MonoBehaviour
     public float t;
     public int hour = 0;
 
-    public UnityEvent OnTheHour;
+    //public UnityEvent OnTheHour;
 
-    public UnityEvent<in> OnTheHour;
+    public UnityEvent<int> OnTheHour;
 
     Coroutine clockIsRunning;
-    Coroutine doingOneHourOfMovement;
+    IEnumerator doingOneHourOfMovement;
 
     void Start()
     {
-        clockIsRunning = startCountline
-//yield return StartCoroutine(Moveclockandhour());
+        clockIsRunning = StartCoroutine(MoveTheClock());
     }
 
     IEnumerator MoveTheClock() {
@@ -30,9 +29,28 @@ public class KitClock : MonoBehaviour
         while (true)
         {
             doingOneHourOfMovement = MoveTheClockHandsOneHour();
-            yield return StartCoroutine(Moveclockandhour());
+            yield return StartCoroutine(doingOneHourOfMovement);
 
         }
+    }
+    IEnumerator MoveTheClockHandsOneHour()
+    {
+        t = 0;
+        while (t < timeAnHourTakes)
+        {
+
+            t += Time.deltaTime;
+            minutehand.Rotate(0, 0, -(360 / timeAnHourTakes) * Time.deltaTime);
+            hourHand.Rotate(0, 0, -(30 / timeAnHourTakes) * Time.deltaTime);
+            yield return null;
+
+        }
+        hour++;
+        if (hour == 13) 
+        {
+            hour = 1;
+        }
+        OnTheHour.Invoke(hour);
     }
 
 
@@ -45,7 +63,8 @@ public class KitClock : MonoBehaviour
         {
             t = 0;
 
-            OnTheHour.Invoke();
+            // below is the one line i can't figure out how to fix, hope thing still (mostly) work :3
+            //OnTheHour.Invoke();
             hour++;
             if (hour == 12)
             {
@@ -53,21 +72,10 @@ public class KitClock : MonoBehaviour
             }
         }
     }
-    IEnumerator Moveclockandhour()
-    {
-        t = 0;
-        while (t < timeAnHourTakes) {
-
-            t += Time.deltaTime;
-            minutehand.Rotate(0, 0, (360 / timeAnHourTakes) * Time.deltaTime);
-            hourHand.Rotate(0, 0, (360 / timeAnHourTakes) * Time.deltaTime);
-            yield return null;
-            
-        }
-        OnTheHour.Invoke(hour);
-    }
+    
     public void StopTheClock() 
     {
-        StopCoroutine
+        StopCoroutine(clockIsRunning);
+        StopCoroutine(doingOneHourOfMovement);
     }
 }
