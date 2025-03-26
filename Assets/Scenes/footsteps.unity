@@ -346,6 +346,39 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 021b6876bcca9a84d90e982edffde28c, type: 3}
   - {fileID: 8300000, guid: e7bee4f7823b07747860fa834de03c99, type: 3}
   - {fileID: 8300000, guid: c2a4fd29502655340a8c220f82ec6ab5, type: 3}
+  curve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.5
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: -2
+      outSlope: -2
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!82 &1742338686
 AudioSource:
   m_ObjectHideFlags: 0
