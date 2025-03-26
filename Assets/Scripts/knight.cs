@@ -26,6 +26,7 @@ public class knight : MonoBehaviour
 
         if (Input.GetMouseButton(0))
         {
+            canRun = false;
             animaor.SetTrigger("attack");
         
         }
