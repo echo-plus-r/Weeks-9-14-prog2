@@ -21,6 +21,7 @@ public class balloon : MonoBehaviour
         if (Input.GetMouseButtonUp(0))
         {
             StopAllCoroutines();
+            //wakeup = StartCoroutine(fly());
             StartCoroutine(fly());
         }
     }
@@ -30,8 +31,9 @@ public class balloon : MonoBehaviour
         while (true)
         {
             pos = transform.position;
-            pos.y += 1;
+            pos.y += 1.0f * Time.deltaTime;
             transform.position = pos;
+            yield return null;
         }
     }
         IEnumerator grow() 
@@ -39,7 +41,7 @@ public class balloon : MonoBehaviour
         while (true)
         {
             transform.localScale += siz * Time.deltaTime;
-            if (transform.localScale.x >= 20)
+            if (transform.localScale.x >= 3)
             {
                 Debug.Log("the balloon is supposed to pop, yet it has not :/");
             }
