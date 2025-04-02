@@ -72,7 +72,9 @@ public class balloon : MonoBehaviour
             // check if the balloon is over 3 units
             if (transform.localScale.x >= 3)
             {
+                Debug.Log("ping");
                 tooBig.Invoke();
+                Destroy(gameObject);
             }
             yield return null;
         }
