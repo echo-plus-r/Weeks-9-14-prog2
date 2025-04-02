@@ -9,10 +9,12 @@ public class KnightTileMovement : MonoBehaviour
     public Tile grass;
     LineRenderer lr;
     Vector3 pos;
+    Coroutine moving;
     // Start is called before the first frame update
     void Start()
     {
         lr = GetComponent<LineRenderer>();
+        
     }
 
     // Update is called once per frame
@@ -34,11 +36,25 @@ public class KnightTileMovement : MonoBehaviour
             else 
             {
                 lr.SetPosition(0, pos);
-                pos = gridpos;
+                moving = StartCoroutine(walkin(pos, gridpos));
+                //pos = gridpos;
                 lr.SetPosition(1, pos);
             }
-            transform.position = pos;
+            //transform.position = pos;
         }   
 
+    }
+    // no idea if this will work
+    IEnumerator walkin(Vector3 pos, Vector3Int gridpos)
+    {
+        float t = 0f;
+        while (pos != gridpos)
+        {
+            pos = Vector3.Lerp(pos, gridpos, t);
+            transform.position = pos;
+            t += 0.1f * Time.deltaTime;
+            yield return null;
+        }
+        
     }
 }
