@@ -7,11 +7,12 @@ public class KnightTileMovement : MonoBehaviour
 {
     public Tilemap tm;
     public Tile grass;
+    LineRenderer lr;
     Vector3 pos;
     // Start is called before the first frame update
     void Start()
     {
-        
+        lr = GetComponent<LineRenderer>();
     }
 
     // Update is called once per frame
@@ -32,7 +33,9 @@ public class KnightTileMovement : MonoBehaviour
             }
             else 
             {
+                lr.SetPosition(0, pos);
                 pos = gridpos;
+                lr.SetPosition(1, pos);
             }
             transform.position = pos;
         }   
