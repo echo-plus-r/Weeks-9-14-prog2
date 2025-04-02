@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class balloon : MonoBehaviour
 {
@@ -13,6 +14,9 @@ public class balloon : MonoBehaviour
 
     // pos is short for position and holds the position
     Vector3 pos;
+
+    // this event runs when the balloon pops from being too big.
+    public UnityEvent tooBig;
 
     // Start is called before the first frame update
     void Start()
@@ -68,9 +72,7 @@ public class balloon : MonoBehaviour
             // check if the balloon is over 3 units
             if (transform.localScale.x >= 3)
             {
-                //WIP
-                // this will invoke an event soon
-                Debug.Log("the balloon is supposed to pop, yet it has not :/");
+                tooBig.Invoke();
             }
             yield return null;
         }
