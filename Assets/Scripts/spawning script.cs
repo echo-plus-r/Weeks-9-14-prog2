@@ -4,16 +4,14 @@ using UnityEngine;
 
 public class spawningscript : MonoBehaviour
 {
+    // this game object is what the spawner will spawn
     public GameObject balloon;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+
 
     // Update is called once per frame
     void Update()
     {
+        // checks if the player is pressing the left mouse button down
         if (Input.GetMouseButtonDown(0))
         {
             // getting the mouse position and converting it into a world position
