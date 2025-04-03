@@ -5,11 +5,14 @@ using UnityEngine.Events;
 
 public class spawningscript : MonoBehaviour
 {
-    // this game object is what the spawner will spawn
+    // balloon is what the spawner will spawn
+    // newBalloon is a refrence to the most recently spawned balloon
     public GameObject balloon, newBalloon;
-    public scorekeep scorekeep;
+
+    // this holds the part of a newly spawned balloon that we want to pass to the scorekeep script so it can add a listener to itself
     public balloon balloonScript;
 
+    // event that runs whenever a balloon is spawned, listened to by the scorekeep script
     public UnityEvent<balloon> spawned;
 
 
@@ -22,9 +25,13 @@ public class spawningscript : MonoBehaviour
             // getting the mouse position and converting it into a world position
             Vector2 mousepos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
-            // spawning a plant at the mouse position
+            // spawning a plant at the mouse position and defininng newBalloon
             newBalloon = Instantiate(balloon, mousepos, Quaternion.identity);
+
+            // getting a refrence to the balloon component for balloonScript
             balloonScript = newBalloon.GetComponent<balloon>();
+
+            // invoking the spawning event and passing the script refrence
             spawned.Invoke(balloonScript);
             
         }

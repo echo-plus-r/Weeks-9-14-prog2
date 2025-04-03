@@ -180,7 +180,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: 0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -492,95 +492,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &1611129351
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 2549385967039429040, guid: 94b2be1f847ce354da894584e5b0f1fa, type: 3}
-      propertyPath: tooBig.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2549385967039429040, guid: 94b2be1f847ce354da894584e5b0f1fa, type: 3}
-      propertyPath: tooBig.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2549385967039429040, guid: 94b2be1f847ce354da894584e5b0f1fa, type: 3}
-      propertyPath: tooBig.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 755192202}
-    - target: {fileID: 2549385967039429040, guid: 94b2be1f847ce354da894584e5b0f1fa, type: 3}
-      propertyPath: tooBig.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2549385967039429040, guid: 94b2be1f847ce354da894584e5b0f1fa, type: 3}
-      propertyPath: tooBig.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: popped
-      objectReference: {fileID: 0}
-    - target: {fileID: 2549385967039429040, guid: 94b2be1f847ce354da894584e5b0f1fa, type: 3}
-      propertyPath: tooBig.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: scorekeep, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 2549385967039429040, guid: 94b2be1f847ce354da894584e5b0f1fa, type: 3}
-      propertyPath: tooBig.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 2973818190577623233, guid: 94b2be1f847ce354da894584e5b0f1fa, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -11.52
-      objectReference: {fileID: 0}
-    - target: {fileID: 2973818190577623233, guid: 94b2be1f847ce354da894584e5b0f1fa, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.32
-      objectReference: {fileID: 0}
-    - target: {fileID: 2973818190577623233, guid: 94b2be1f847ce354da894584e5b0f1fa, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2973818190577623233, guid: 94b2be1f847ce354da894584e5b0f1fa, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2973818190577623233, guid: 94b2be1f847ce354da894584e5b0f1fa, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2973818190577623233, guid: 94b2be1f847ce354da894584e5b0f1fa, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2973818190577623233, guid: 94b2be1f847ce354da894584e5b0f1fa, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2973818190577623233, guid: 94b2be1f847ce354da894584e5b0f1fa, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2973818190577623233, guid: 94b2be1f847ce354da894584e5b0f1fa, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2973818190577623233, guid: 94b2be1f847ce354da894584e5b0f1fa, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6099673070164515514, guid: 94b2be1f847ce354da894584e5b0f1fa, type: 3}
-      propertyPath: m_Name
-      value: balloon
-      objectReference: {fileID: 0}
-    - target: {fileID: 6099673070164515514, guid: 94b2be1f847ce354da894584e5b0f1fa, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 94b2be1f847ce354da894584e5b0f1fa, type: 3}
 --- !u!1 &1810161825
 GameObject:
   m_ObjectHideFlags: 0
@@ -681,4 +592,3 @@ SceneRoots:
   - {fileID: 1607188141}
   - {fileID: 1317803438}
   - {fileID: 1270500627}
-  - {fileID: 1611129351}
