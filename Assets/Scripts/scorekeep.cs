@@ -15,7 +15,7 @@ public class scorekeep : MonoBehaviour
     TMP_Text tmp;
 
     // int that holds the score.
-    int score = 0;
+    float score = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -36,19 +36,10 @@ public class scorekeep : MonoBehaviour
     }
 
     // this function runs every time a balloon is popped
-    public void popped(int type)
+    public void popped(float type)
     {
 
-        if (score == 0)
-        {
-            // removing from the score       
-            score -= 100;
-        }
-        else
-        {
-            // adding to the score
-            score += 100;
-        }
+        score += type;
 
         // updating the score.
         tmp.SetText(score.ToString());

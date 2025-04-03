@@ -16,7 +16,7 @@ public class balloon : MonoBehaviour
     Vector3 pos;
 
     // this event runs when the balloon pops from being too big.
-    public UnityEvent<int> ChangeScore;
+    public UnityEvent<float> ChangeScore;
 
     // Start is called before the first frame update
     void Start()
@@ -50,7 +50,9 @@ public class balloon : MonoBehaviour
         {
             if (transform.position.y > 8)
             {
-                ChangeScore.Invoke(1);
+                // fix later
+                ChangeScore.Invoke(1 * transform.localScale.x);
+                Destroy(gameObject);
             }
             // sets pos to the object's position
             pos = transform.position;
@@ -76,7 +78,7 @@ public class balloon : MonoBehaviour
             // check if the balloon is over 3 units
             if (transform.localScale.x >= 3)
             {
-                ChangeScore.Invoke(0);
+                ChangeScore.Invoke(-1);
                 Destroy(gameObject);
             }
             yield return null;
