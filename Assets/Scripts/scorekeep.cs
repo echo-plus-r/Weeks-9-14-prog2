@@ -36,11 +36,19 @@ public class scorekeep : MonoBehaviour
     }
 
     // this function runs every time a balloon is popped
-    public void popped()
+    public void popped(int type)
     {
 
-        // removing from the score       
-        score -= 100;
+        if (score == 0)
+        {
+            // removing from the score       
+            score -= 100;
+        }
+        else
+        {
+            // adding to the score
+            score += 100;
+        }
 
         // updating the score.
         tmp.SetText(score.ToString());
@@ -50,6 +58,6 @@ public class scorekeep : MonoBehaviour
     // it adds a new listener to itself to listen to events from the new balloon
     public void MakeListener(balloon nb)
     {
-        nb.tooBig.AddListener(popped);
+        nb.ChangeScore.AddListener(popped);
     }
 }
