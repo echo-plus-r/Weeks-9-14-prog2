@@ -1,11 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class spawningscript : MonoBehaviour
 {
     // this game object is what the spawner will spawn
-    public GameObject balloon;
+    public GameObject balloon, newBalloon;
+    public scorekeep scorekeep;
+    public balloon balloonScript;
+
+    public UnityEvent<balloon> spawned;
 
 
     // Update is called once per frame
@@ -18,7 +23,10 @@ public class spawningscript : MonoBehaviour
             Vector2 mousepos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
             // spawning a plant at the mouse position
-            Instantiate(balloon, mousepos, Quaternion.identity);
+            newBalloon = Instantiate(balloon, mousepos, Quaternion.identity);
+            balloonScript = newBalloon.GetComponent<balloon>();
+            spawned.Invoke(balloonScript);
+            
         }
     }
 
