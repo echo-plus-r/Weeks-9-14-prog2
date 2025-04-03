@@ -52,7 +52,7 @@ public class balloon : MonoBehaviour
             pos = transform.position;
 
             // add's to pos' y value
-            pos.y += 1.0f * Time.deltaTime;
+            pos.y += 2.0f * Time.deltaTime;
 
             // sets the object's position as pos.
             transform.position = pos;
