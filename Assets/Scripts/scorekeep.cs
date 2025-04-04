@@ -39,7 +39,8 @@ public class scorekeep : MonoBehaviour
     public void popped(float type)
     {
 
-        score += type;
+        // multiplying inputted score by 10, adding it to the score, then rounding the score.
+        score = Mathf.Round(score + (type * 10));
 
         // updating the score.
         tmp.SetText(score.ToString());
