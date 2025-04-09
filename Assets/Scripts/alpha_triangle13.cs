@@ -20,8 +20,8 @@ public class alpha_triangle13 : MonoBehaviour
         //pos.x += (mousepos.x / 5) * Time.deltaTime;
         //pos.y += (mousepos.y / 5) * Time.deltaTime;
 
-        pos.y += 0.1f * Time.deltaTime;
+        //pos.y += 0.1f * Time.deltaTime;
         transform.up = rot;
-        transform.position = pos;
+        transform.position += transform.up * 0.5f * Time.deltaTime;
     }
 }
