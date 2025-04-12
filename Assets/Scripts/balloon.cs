@@ -50,8 +50,10 @@ public class balloon : MonoBehaviour
         {
             if (transform.position.y > 8)
             {
-                // fix later
-                ChangeScore.Invoke(1 * transform.localScale.x);
+                // invoking the ChangeScore event and passing the local scale
+                ChangeScore.Invoke(transform.localScale.x);
+
+                // making the balloon destroy itself
                 Destroy(gameObject);
             }
             // sets pos to the object's position
@@ -69,7 +71,6 @@ public class balloon : MonoBehaviour
     // the coroutine that handles the balloon growing when the player first spawns one.
     IEnumerator grow() 
     {
-        // NOTE FOR DEV: change the condition of this while statement to check scale like the nested if statement does?
         while (true)
         {
             // adding on to the local scale
@@ -78,7 +79,10 @@ public class balloon : MonoBehaviour
             // check if the balloon is over 3 units
             if (transform.localScale.x >= 3)
             {
+                // invoking the ChangeScore event and passing -1
                 ChangeScore.Invoke(-1);
+
+                // having the balloon destroy itself
                 Destroy(gameObject);
             }
             yield return null;
